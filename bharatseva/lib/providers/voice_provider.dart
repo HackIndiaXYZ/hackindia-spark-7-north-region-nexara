@@ -1,18 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:speech_to_text/speech_to_text.dart';
+import 'package:flutter_tts/flutter_tts.dart';
 
 class VoiceProvider with ChangeNotifier {
   final SpeechToText _speechToText = SpeechToText();
+  final FlutterTts _flutterTts = FlutterTts();
   bool _isListening = false;
   String _spokenText = '';
   bool _speechEnabled = false;
 
   VoiceProvider() {
     _initSpeech();
+    _initTts();
   }
 
   bool get isListening => _isListening;
   String get spokenText => _spokenText;
+
+  void _initTts() async {
+    await _flutterTts.setLanguage("hi-IN");
+  }
 
   void _initSpeech() async {
     _speechEnabled = await _speechToText.initialize(
@@ -25,7 +32,8 @@ class VoiceProvider with ChangeNotifier {
         if (status == 'done' || status == 'notListening') {
           _isListening = false;
           if (_spokenText == 'Listening to your request...') {
-            _spokenText = 'Tap the mic to discover government schemes';
+            _spokenText = 'Aapne kuch nahi bola. Mujhe aapke baare me bataiye';
+            _flutterTts.speak(_spokenText);
           }
           notifyListeners();
         }
@@ -43,7 +51,7 @@ class VoiceProvider with ChangeNotifier {
       return;
     }
 
-    if (_isListening) {
+    if (_speechToText.isListening) {
       _stopListening();
     } else {
       _startListening();
@@ -51,6 +59,11 @@ class VoiceProvider with ChangeNotifier {
   }
 
   void _startListening() async {
+    if (_speechToText.isListening) return;
+
+    // Stop any ongoing speech before listening
+    await _flutterTts.stop();
+
     _spokenText = 'Listening to your request...';
     _isListening = true;
     notifyListeners();
@@ -73,10 +86,13 @@ class VoiceProvider with ChangeNotifier {
   }
 
   void _stopListening() async {
-    await _speechToText.stop();
+    if (_speechToText.isListening) {
+      await _speechToText.stop();
+    }
     _isListening = false;
     if (_spokenText == 'Listening to your request...') {
-      _spokenText = 'Tap the mic to discover government schemes';
+      _spokenText = 'Aapne kuch nahi bola. Mujhe aapke baare me bataiye';
+      _flutterTts.speak(_spokenText);
     }
     notifyListeners();
   }
