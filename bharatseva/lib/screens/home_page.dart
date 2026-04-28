@@ -103,7 +103,7 @@ class _HomePageState extends State<HomePage> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            scheme.nameHi,
+                            scheme.name,
                             style: const TextStyle(
                               fontSize: 18,
                               fontWeight: FontWeight.bold,
@@ -112,7 +112,7 @@ class _HomePageState extends State<HomePage> {
                           ),
                           const SizedBox(height: 8),
                           Text(
-                            scheme.descriptionHi,
+                            scheme.detailedDescription,
                             style: TextStyle(
                               fontSize: 14,
                               color: Colors.grey[800],
@@ -171,14 +171,21 @@ class _HomePageState extends State<HomePage> {
                       },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: const Color(0xFFFB2056),
-                        padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 15),
+                        padding: const EdgeInsets.symmetric(
+                          horizontal: 40,
+                          vertical: 15,
+                        ),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(30),
                         ),
                       ),
                       child: const Text(
                         'शुरुआत करें',
-                        style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold, color: Colors.white),
+                        style: TextStyle(
+                          fontSize: 22,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                        ),
                       ),
                     ),
                     const SizedBox(height: 10),
@@ -215,7 +222,9 @@ class _HomePageState extends State<HomePage> {
                           padding: const EdgeInsets.all(20.0),
                           child: ListView(
                             physics: const BouncingScrollPhysics(),
-                            children: voiceProvider.userProfile.entries.map((e) {
+                            children: voiceProvider.userProfile.entries.map((
+                              e,
+                            ) {
                               return Padding(
                                 padding: const EdgeInsets.only(bottom: 12.0),
                                 child: Row(
@@ -255,7 +264,9 @@ class _HomePageState extends State<HomePage> {
                       onPressed: () {
                         // View schemes or restart
                         if (voiceProvider.suggestedSchemes.isNotEmpty) {
-                          final schemes = List<Scheme>.from(voiceProvider.suggestedSchemes);
+                          final schemes = List<Scheme>.from(
+                            voiceProvider.suggestedSchemes,
+                          );
                           voiceProvider.clearSuggestedSchemes();
                           _showSchemesBottomSheet(schemes);
                         }
