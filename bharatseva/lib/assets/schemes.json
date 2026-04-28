@@ -1,0 +1,1744 @@
+[
+  {
+    "id": "C001",
+    "name_en": "PM Kisan Samman Nidhi",
+    "name_hi": "पीएम किसान सम्मान निधि",
+    "category": "agriculture",
+    "state": "Central",
+    "eligibility": {
+      "occupation": [
+        "farmer"
+      ],
+      "notes": "Small and marginal farmers with cultivable land"
+    },
+    "benefit": "₹6,000 per year (₹2,000 every 4 months) directly in bank account",
+    "documents": [
+      "Aadhaar card",
+      "Land records",
+      "Bank account"
+    ],
+    "apply_url": "https://pmkisan.gov.in",
+    "description_hi": "छोटे और सीमांत किसानों को हर साल ₹6,000 सीधे बैंक खाते में मिलते हैं।",
+    "keywords": [
+      "किसान पैसे",
+      "खेती मदद",
+      "कृषि सहायता",
+      "किसान योजना",
+      "पैसे कब आएंगे"
+    ],
+    "demo_story": "Ramesh, 55, farmer from Kangra — gets ₹6,000/year just for being a farmer",
+    "tags": [
+      "farmer",
+      "money",
+      "agriculture",
+      "regular income"
+    ]
+  },
+  {
+    "id": "C002",
+    "name_en": "Ayushman Bharat PM-JAY",
+    "name_hi": "आयुष्मान भारत प्रधानमंत्री जन आरोग्य योजना",
+    "category": "health",
+    "state": "Central",
+    "eligibility": {
+      "notes": "BPL/SECC listed families. No income certificate needed if listed."
+    },
+    "benefit": "₹5 lakh per year free health insurance at any empanelled hospital",
+    "documents": [
+      "Aadhaar card",
+      "Ration card or SECC listing"
+    ],
+    "apply_url": "https://pmjay.gov.in",
+    "description_hi": "गरीब परिवारों को किसी भी सरकारी या चुने हुए अस्पताल में ₹5 लाख तक मुफ्त इलाज मिलता है।",
+    "keywords": [
+      "बीमारी इलाज पैसे नहीं",
+      "अस्पताल फ्री",
+      "गरीब बीमारी मदद",
+      "आयुष्मान कार्ड"
+    ],
+    "demo_story": "Sunita's mother needs surgery — Ayushman covers ₹5 lakh, zero cost",
+    "tags": [
+      "health",
+      "hospital",
+      "free treatment",
+      "BPL"
+    ]
+  },
+  {
+    "id": "C003",
+    "name_en": "PM Ujjwala Yojana",
+    "name_hi": "प्रधानमंत्री उज्ज्वला योजना",
+    "category": "women",
+    "state": "Central",
+    "eligibility": {
+      "gender": "female",
+      "notes": "BPL household adult woman without LPG connection"
+    },
+    "benefit": "Free LPG gas cylinder connection + first refill free",
+    "documents": [
+      "Aadhaar card",
+      "BPL ration card",
+      "Bank account"
+    ],
+    "apply_url": "https://pmuy.gov.in",
+    "description_hi": "गरीब घरों की महिलाओं को मुफ्त गैस कनेक्शन मिलता है ताकि चूल्हे का धुआं न हो।",
+    "keywords": [
+      "गैस सिलेंडर मुफ्त",
+      "रसोई गैस महिला",
+      "उज्ज्वला",
+      "धुआं रहित रसोई"
+    ],
+    "demo_story": "Kamla from Mandi cooks on wood smoke — Ujjwala gives her a free gas connection",
+    "tags": [
+      "women",
+      "LPG",
+      "cooking",
+      "BPL",
+      "free"
+    ]
+  },
+  {
+    "id": "C004",
+    "name_en": "PM Fasal Bima Yojana",
+    "name_hi": "प्रधानमंत्री फसल बीमा योजना",
+    "category": "agriculture",
+    "state": "Central",
+    "eligibility": {
+      "occupation": [
+        "farmer"
+      ],
+      "notes": "All farmers growing notified crops."
+    },
+    "benefit": "Crop insurance — if crop fails due to drought/flood/pest, get compensation up to full sum insured",
+    "documents": [
+      "Aadhaar card",
+      "Land records",
+      "Bank account",
+      "Khasra number"
+    ],
+    "apply_url": "https://pmfby.gov.in",
+    "description_hi": "अगर बारिश, सूखे, या कीड़ों से फसल खराब हो जाए तो मुआवजा मिलता है।",
+    "keywords": [
+      "फसल बर्बाद",
+      "ओले पड़े",
+      "बाढ़ फसल",
+      "किसान बीमा",
+      "फसल खराब मुआवजा"
+    ],
+    "demo_story": "Apple orchard in Shimla destroyed by hail — PMFBY compensates the farmer",
+    "tags": [
+      "farmer",
+      "insurance",
+      "crop damage",
+      "flood",
+      "drought"
+    ]
+  },
+  {
+    "id": "C005",
+    "name_en": "Kisan Credit Card (KCC)",
+    "name_hi": "किसान क्रेडिट कार्ड",
+    "category": "agriculture",
+    "state": "Central",
+    "eligibility": {
+      "occupation": [
+        "farmer",
+        "animal husbandry",
+        "fisherman"
+      ],
+      "notes": "Any farmer who owns or leases land"
+    },
+    "benefit": "Short-term credit up to ₹3 lakh at 4% interest rate (after subsidy)",
+    "documents": [
+      "Aadhaar card",
+      "Land records",
+      "Passport photo",
+      "Bank account"
+    ],
+    "apply_url": "https://pmkisan.gov.in/KCC.aspx",
+    "description_hi": "किसानों को खेती के खर्च के लिए कम ब्याज पर ₹3 लाख तक का कर्ज मिलता है।",
+    "keywords": [
+      "किसान लोन",
+      "खेती कर्ज",
+      "बीज खाद पैसे नहीं",
+      "KCC कार्ड"
+    ],
+    "demo_story": "Ramesh needs money to buy seeds and fertilizer — KCC gives him ₹3 lakh at 4%",
+    "tags": [
+      "farmer",
+      "loan",
+      "credit",
+      "agriculture",
+      "low interest"
+    ]
+  },
+  {
+    "id": "C006",
+    "name_en": "PM Awas Yojana Gramin",
+    "name_hi": "प्रधानमंत्री आवास योजना ग्रामीण",
+    "category": "housing",
+    "state": "Central",
+    "eligibility": {
+      "residence": "rural",
+      "notes": "Houseless or dilapidated house families in rural areas"
+    },
+    "benefit": "₹1.3 lakh (hilly states like HP) to build a pucca house",
+    "documents": [
+      "Aadhaar card",
+      "BPL ration card",
+      "Bank account",
+      "Land documents"
+    ],
+    "apply_url": "https://pmayg.nic.in",
+    "description_hi": "ग्रामीण गरीबों को पक्का घर बनाने के लिए ₹1.3 लाख तक की मदद मिलती है।",
+    "keywords": [
+      "पक्का घर",
+      "घर बनाना पैसे नहीं",
+      "कच्चा घर",
+      "आवास मदद",
+      "मकान योजना"
+    ],
+    "demo_story": "Family in Kullu lives in a broken mud house — PMAY gives ₹1.3 lakh to build pucca home",
+    "tags": [
+      "housing",
+      "BPL",
+      "rural",
+      "construction",
+      "home"
+    ]
+  },
+  {
+    "id": "C007",
+    "name_en": "Sukanya Samriddhi Yojana",
+    "name_hi": "सुकन्या समृद्धि योजना",
+    "category": "education",
+    "state": "Central",
+    "eligibility": {
+      "gender": "female",
+      "age_max": 10,
+      "notes": "For girl child below 10 years. Account by parent/guardian."
+    },
+    "benefit": "High-interest savings account (8.2% p.a.) for girl's education and marriage",
+    "documents": [
+      "Girl's birth certificate",
+      "Parent's Aadhaar",
+      "Post office/bank"
+    ],
+    "apply_url": "https://www.indiapost.gov.in",
+    "description_hi": "बेटी के लिए पोस्ट ऑफिस में खाता खुलता है जिसमें 8.2% ब्याज मिलता है।",
+    "keywords": [
+      "बेटी पढ़ाई बचत",
+      "लड़की शादी पैसे",
+      "सुकन्या खाता",
+      "बेटी भविष्य"
+    ],
+    "demo_story": "Parents open Sukanya account for 5-year-old daughter — money grows at 8.2% for her education",
+    "tags": [
+      "girl child",
+      "savings",
+      "education",
+      "marriage",
+      "future"
+    ]
+  },
+  {
+    "id": "C008",
+    "name_en": "PM MUDRA Yojana",
+    "name_hi": "प्रधानमंत्री मुद्रा योजना",
+    "category": "employment",
+    "state": "Central",
+    "eligibility": {
+      "notes": "Non-farm micro and small enterprise owners. No collateral for up to ₹10 lakh."
+    },
+    "benefit": "Business loan: Shishu (₹50K), Kishore (₹5L), Tarun (₹10L) — no collateral",
+    "documents": [
+      "Aadhaar card",
+      "Business plan",
+      "Bank account"
+    ],
+    "apply_url": "https://www.mudra.org.in",
+    "description_hi": "छोटा व्यापार शुरू करने के लिए बिना गारंटी के ₹10 लाख तक का लोन मिलता है।",
+    "keywords": [
+      "दुकान खोलना",
+      "व्यापार शुरू करना",
+      "लोन बिना गारंटी",
+      "छोटा बिज़नेस"
+    ],
+    "demo_story": "Meera wants to open a stitching shop — MUDRA gives her ₹50,000 with no collateral",
+    "tags": [
+      "business",
+      "loan",
+      "self-employment",
+      "startup",
+      "no collateral"
+    ]
+  },
+  {
+    "id": "C009",
+    "name_en": "PM Kaushal Vikas Yojana",
+    "name_hi": "प्रधानमंत्री कौशल विकास योजना",
+    "category": "employment",
+    "state": "Central",
+    "eligibility": {
+      "age_min": 18,
+      "age_max": 45,
+      "notes": "Indian youth who are school/college dropout or seeking employment"
+    },
+    "benefit": "Free skill training in 40+ trades + ₹8,000 reward on certification",
+    "documents": [
+      "Aadhaar card",
+      "Age proof",
+      "Educational certificate"
+    ],
+    "apply_url": "https://www.pmkvyofficial.org",
+    "description_hi": "युवाओं को मुफ्त में हुनर सिखाया जाता है और पास होने पर ₹8,000 भी मिलते हैं।",
+    "keywords": [
+      "नौकरी नहीं मिल रही",
+      "हुनर सीखना",
+      "फ्री ट्रेनिंग",
+      "बेरोजगार युवा",
+      "काम सीखना"
+    ],
+    "demo_story": "Vikram, 22, dropout — PMKVY trains him as electrician for free + ₹8,000 reward",
+    "tags": [
+      "youth",
+      "skill",
+      "training",
+      "employment",
+      "free",
+      "dropout"
+    ]
+  },
+  {
+    "id": "C010",
+    "name_en": "PM Suraksha Bima Yojana",
+    "name_hi": "प्रधानमंत्री सुरक्षा बीमा योजना",
+    "category": "insurance",
+    "state": "Central",
+    "eligibility": {
+      "age_min": 18,
+      "age_max": 70,
+      "notes": "Any person with a bank account"
+    },
+    "benefit": "₹2 lakh accident insurance for only ₹20 per year",
+    "documents": [
+      "Aadhaar card",
+      "Bank account"
+    ],
+    "apply_url": "https://financialservices.gov.in",
+    "description_hi": "सिर्फ ₹20 साल में देकर दुर्घटना में ₹2 लाख का बीमा मिलता है।",
+    "keywords": [
+      "दुर्घटना बीमा",
+      "20 रुपये बीमा",
+      "एक्सीडेंट पैसे",
+      "सस्ता बीमा"
+    ],
+    "demo_story": "A daily labourer gets ₹2 lakh accident coverage for just ₹20/year",
+    "tags": [
+      "insurance",
+      "accident",
+      "cheap",
+      "everyone",
+      "bank account"
+    ]
+  },
+  {
+    "id": "C011",
+    "name_en": "PM Jeevan Jyoti Bima Yojana",
+    "name_hi": "प्रधानमंत्री जीवन ज्योति बीमा योजना",
+    "category": "insurance",
+    "state": "Central",
+    "eligibility": {
+      "age_min": 18,
+      "age_max": 50,
+      "notes": "Any person with a savings bank account"
+    },
+    "benefit": "₹2 lakh life insurance for ₹436 per year",
+    "documents": [
+      "Aadhaar card",
+      "Bank account"
+    ],
+    "apply_url": "https://financialservices.gov.in",
+    "description_hi": "₹436 साल में देकर ₹2 लाख का जीवन बीमा मिलता है।",
+    "keywords": [
+      "जीवन बीमा सस्ता",
+      "मृत्यु पर परिवार को पैसे",
+      "LIC सस्ता",
+      "बीमा योजना"
+    ],
+    "demo_story": "If a farmer dies, his family gets ₹2 lakh for just ₹436/year premium",
+    "tags": [
+      "life insurance",
+      "death",
+      "family",
+      "cheap",
+      "bank account"
+    ]
+  },
+  {
+    "id": "C012",
+    "name_en": "Atal Pension Yojana",
+    "name_hi": "अटल पेंशन योजना",
+    "category": "social security",
+    "state": "Central",
+    "eligibility": {
+      "age_min": 18,
+      "age_max": 40,
+      "notes": "Unorganized sector workers. Not an income tax payer."
+    },
+    "benefit": "Guaranteed monthly pension of ₹1,000–₹5,000 after age 60",
+    "documents": [
+      "Aadhaar card",
+      "Bank account",
+      "Mobile number"
+    ],
+    "apply_url": "https://npscra.nsdl.co.in",
+    "description_hi": "छोटा पैसा जमा करें, 60 साल बाद हर महीने पेंशन मिलेगी।",
+    "keywords": [
+      "बुढ़ापे में पैसे",
+      "पेंशन कैसे मिलेगी",
+      "रिटायरमेंट",
+      "बुढ़ापा मदद"
+    ],
+    "demo_story": "Young farm worker contributes ₹42/month — gets ₹1,000 pension every month at 60",
+    "tags": [
+      "pension",
+      "retirement",
+      "elderly",
+      "unorganized sector",
+      "savings"
+    ]
+  },
+  {
+    "id": "C013",
+    "name_en": "NSAP Old Age Pension",
+    "name_hi": "राष्ट्रीय सामाजिक सहायता - वृद्धावस्था पेंशन",
+    "category": "social security",
+    "state": "Central",
+    "eligibility": {
+      "age_min": 60,
+      "income": "BPL household"
+    },
+    "benefit": "₹200–₹500/month central + HP adds ₹700 more (total ₹900–₹1,200/month in HP)",
+    "documents": [
+      "Aadhaar card",
+      "Age proof",
+      "BPL ration card",
+      "Bank account"
+    ],
+    "apply_url": "https://nsap.nic.in",
+    "description_hi": "60 साल से ऊपर के गरीब बुजुर्गों को हर महीने पेंशन मिलती है।",
+    "keywords": [
+      "बुजुर्ग पेंशन",
+      "बुढ़ापा सहारा",
+      "60 साल पेंशन",
+      "वृद्ध मदद"
+    ],
+    "demo_story": "Dadi, 68, BPL — gets monthly pension for basic survival",
+    "tags": [
+      "elderly",
+      "senior citizen",
+      "pension",
+      "BPL",
+      "above 60"
+    ]
+  },
+  {
+    "id": "C014",
+    "name_en": "Stand Up India",
+    "name_hi": "स्टैंड अप इंडिया",
+    "category": "employment",
+    "state": "Central",
+    "eligibility": {
+      "notes": "Women, SC, or ST entrepreneurs starting a new business"
+    },
+    "benefit": "Bank loan from ₹10 lakh to ₹1 crore for greenfield enterprises",
+    "documents": [
+      "Aadhaar card",
+      "Business plan",
+      "Caste certificate (for SC/ST)"
+    ],
+    "apply_url": "https://www.standupmitra.in",
+    "description_hi": "महिलाओं और SC/ST को नया व्यापार शुरू करने के लिए ₹1 करोड़ तक का बैंक लोन मिलता है।",
+    "keywords": [
+      "महिला व्यापार",
+      "SC ST बिज़नेस लोन",
+      "औरत उद्यमी",
+      "दुकान लोन"
+    ],
+    "demo_story": "Savita, a Dalit woman, gets ₹15 lakh loan to open a dairy farm",
+    "tags": [
+      "women",
+      "SC",
+      "ST",
+      "business",
+      "loan",
+      "entrepreneur"
+    ]
+  },
+  {
+    "id": "C015",
+    "name_en": "Beti Bachao Beti Padhao",
+    "name_hi": "बेटी बचाओ बेटी पढ़ाओ",
+    "category": "education",
+    "state": "Central",
+    "eligibility": {
+      "gender": "female",
+      "notes": "Girl children in select districts"
+    },
+    "benefit": "Scholarships, school incentives, ₹5,000 merit award for girl students",
+    "documents": [
+      "School enrollment certificate",
+      "Aadhaar",
+      "Bank account in girl's name"
+    ],
+    "apply_url": "https://wcd.nic.in/bbbp-schemes",
+    "description_hi": "बेटियों की पढ़ाई और उनके अधिकारों के लिए सरकार की मुख्य योजना।",
+    "keywords": [
+      "बेटी स्कूल",
+      "लड़की पढ़ाई मदद",
+      "बेटी भविष्य",
+      "बेटी पढ़ाओ"
+    ],
+    "demo_story": "12-year-old Priya in a government school gets scholarship to continue education",
+    "tags": [
+      "girl child",
+      "education",
+      "scholarship",
+      "school"
+    ]
+  },
+  {
+    "id": "C016",
+    "name_en": "National Scholarship Portal Post-Matric",
+    "name_hi": "राष्ट्रीय छात्रवृत्ति पोर्टल पोस्ट-मैट्रिक",
+    "category": "education",
+    "state": "Central",
+    "eligibility": {
+      "income_max": 250000,
+      "education": "11th class and above",
+      "notes": "SC/ST/OBC/Minority students"
+    },
+    "benefit": "₹1,200 to ₹10,000+ per year depending on course and category",
+    "documents": [
+      "Aadhaar card",
+      "Income certificate",
+      "Caste certificate",
+      "Marksheet"
+    ],
+    "apply_url": "https://scholarships.gov.in",
+    "description_hi": "11वीं के बाद SC/ST/OBC/अल्पसंख्यक छात्रों को छात्रवृत्ति मिलती है।",
+    "keywords": [
+      "छात्रवृत्ति",
+      "पढ़ाई पैसे नहीं",
+      "कॉलेज फीस मदद",
+      "scholarship OBC SC ST"
+    ],
+    "demo_story": "Mohan, SC student, needs college fees — NSP scholarship covers ₹8,000/year",
+    "tags": [
+      "education",
+      "scholarship",
+      "SC",
+      "ST",
+      "OBC",
+      "minority",
+      "college"
+    ]
+  },
+  {
+    "id": "C017",
+    "name_en": "PM SVAnidhi",
+    "name_hi": "पीएम स्वनिधि योजना",
+    "category": "employment",
+    "state": "Central",
+    "eligibility": {
+      "occupation": [
+        "street vendor",
+        "hawker"
+      ],
+      "notes": "Urban street vendors with vending certificate"
+    },
+    "benefit": "Collateral-free loan: ₹10,000 → ₹20,000 → ₹50,000 with each cycle",
+    "documents": [
+      "Aadhaar card",
+      "Vending certificate",
+      "Bank account"
+    ],
+    "apply_url": "https://pmsvanidhi.mohua.gov.in",
+    "description_hi": "रेहड़ी-पटरी वालों को बिना गारंटी ₹10,000 से ₹50,000 तक का लोन मिलता है।",
+    "keywords": [
+      "रेहड़ी वाला लोन",
+      "ठेला लोन",
+      "सब्जी वाला",
+      "फेरीवाला पैसे"
+    ],
+    "demo_story": "Pushpa sells vegetables on a cart — SVAnidhi gives her ₹10,000 to grow her business",
+    "tags": [
+      "street vendor",
+      "hawker",
+      "loan",
+      "no collateral",
+      "urban"
+    ]
+  },
+  {
+    "id": "C018",
+    "name_en": "MGNREGA",
+    "name_hi": "महात्मा गांधी राष्ट्रीय ग्रामीण रोजगार गारंटी",
+    "category": "employment",
+    "state": "Central",
+    "eligibility": {
+      "residence": "rural",
+      "notes": "Any adult rural household member willing to do unskilled manual work"
+    },
+    "benefit": "100 days guaranteed employment per year at ₹230–₹290/day (HP rate)",
+    "documents": [
+      "Aadhaar card",
+      "Job card from Gram Panchayat"
+    ],
+    "apply_url": "https://nrega.nic.in",
+    "description_hi": "गांव में रहने वाले किसी भी वयस्क को साल में 100 दिन काम और मजदूरी की गारंटी है।",
+    "keywords": [
+      "मनरेगा काम",
+      "NREGA मजदूरी",
+      "गांव में काम",
+      "रोजगार गारंटी",
+      "जॉब कार्ड"
+    ],
+    "demo_story": "Gita from Mandi gets 100 days of guaranteed work near her home at ₹250/day",
+    "tags": [
+      "employment",
+      "rural",
+      "unskilled",
+      "daily wage",
+      "guaranteed work"
+    ]
+  },
+  {
+    "id": "C019",
+    "name_en": "PM Poshan (Mid-Day Meal)",
+    "name_hi": "प्रधानमंत्री पोषण शक्ति निर्माण",
+    "category": "education",
+    "state": "Central",
+    "eligibility": {
+      "age_max": 14,
+      "education": "Class 1 to 8 in government school",
+      "notes": "Automatic for all enrolled children"
+    },
+    "benefit": "Free hot meal every school day",
+    "documents": [
+      "School enrollment (automatic)"
+    ],
+    "apply_url": "https://pmposhan.education.gov.in",
+    "description_hi": "सरकारी स्कूलों में पढ़ने वाले बच्चों को हर दिन मुफ्त पका हुआ खाना मिलता है।",
+    "keywords": [
+      "स्कूल खाना",
+      "मिड डे मील",
+      "बच्चे भोजन स्कूल",
+      "सरकारी स्कूल खाना"
+    ],
+    "demo_story": "Every child in a government school gets a free nutritious meal daily — automatically",
+    "tags": [
+      "children",
+      "school",
+      "food",
+      "nutrition",
+      "automatic"
+    ]
+  },
+  {
+    "id": "C020",
+    "name_en": "ICDS Anganwadi",
+    "name_hi": "आंगनवाड़ी / एकीकृत बाल विकास सेवाएं",
+    "category": "health",
+    "state": "Central",
+    "eligibility": {
+      "age_max": 6,
+      "notes": "Children 0-6 years, pregnant women, nursing mothers"
+    },
+    "benefit": "Free nutrition, immunisation, health check-up, pre-school education",
+    "documents": [
+      "Aadhaar (mother)"
+    ],
+    "apply_url": "https://icds-wcd.nic.in",
+    "description_hi": "6 साल से छोटे बच्चों और गर्भवती महिलाओं को आंगनवाड़ी में मुफ्त पोषण और टीके मिलते हैं।",
+    "keywords": [
+      "बच्चा कुपोषण",
+      "आंगनवाड़ी मदद",
+      "गर्भवती महिला खाना",
+      "छोटे बच्चे टीके"
+    ],
+    "demo_story": "Seema, pregnant in Dharamsala — Anganwadi gives her nutrition support for free",
+    "tags": [
+      "children",
+      "pregnant",
+      "nutrition",
+      "immunisation",
+      "anganwadi"
+    ]
+  },
+  {
+    "id": "C021",
+    "name_en": "Ni-Kshay Poshan Yojana (TB Support)",
+    "name_hi": "निक्षय पोषण योजना",
+    "category": "health",
+    "state": "Central",
+    "eligibility": {
+      "notes": "All TB patients registered at government health facilities"
+    },
+    "benefit": "₹500 per month + free treatment for entire TB treatment duration",
+    "documents": [
+      "Aadhaar card",
+      "TB diagnosis from DOTS centre",
+      "Bank account"
+    ],
+    "apply_url": "https://nikshay.in",
+    "description_hi": "TB के मरीजों को मुफ्त दवाई और हर महीने ₹500 पोषण सहायता मिलती है।",
+    "keywords": [
+      "TB मरीज मदद",
+      "tuberculosis free medicine",
+      "टीबी इलाज",
+      "TB पैसे"
+    ],
+    "demo_story": "TB patient in Shimla gets free medicines + ₹500/month for nutrition during treatment",
+    "tags": [
+      "TB",
+      "tuberculosis",
+      "health",
+      "free medicine",
+      "monthly support"
+    ]
+  },
+  {
+    "id": "C022",
+    "name_en": "Janani Suraksha Yojana",
+    "name_hi": "जननी सुरक्षा योजना",
+    "category": "health",
+    "state": "Central",
+    "eligibility": {
+      "gender": "female",
+      "notes": "Pregnant BPL/SC/ST women delivering in government hospitals"
+    },
+    "benefit": "₹1,400 cash incentive + free delivery at government hospital",
+    "documents": [
+      "Aadhaar",
+      "Ration card",
+      "ANC card"
+    ],
+    "apply_url": "https://nhm.gov.in",
+    "description_hi": "सरकारी अस्पताल में बच्चे के जन्म पर महिला को ₹1,400 तक नकद प्रोत्साहन मिलता है।",
+    "keywords": [
+      "बच्चे का जन्म पैसे",
+      "delivery पैसे सरकार",
+      "गर्भवती सरकारी अस्पताल",
+      "JSY"
+    ],
+    "demo_story": "Sunita delivers her baby in government hospital — gets ₹1,400 cash and free delivery",
+    "tags": [
+      "pregnant",
+      "delivery",
+      "women",
+      "BPL",
+      "health",
+      "maternity"
+    ]
+  },
+  {
+    "id": "C023",
+    "name_en": "Pradhan Mantri Matru Vandana Yojana",
+    "name_hi": "प्रधानमंत्री मातृ वंदना योजना",
+    "category": "women",
+    "state": "Central",
+    "eligibility": {
+      "gender": "female",
+      "age_min": 19,
+      "notes": "First-time pregnant/nursing mothers"
+    },
+    "benefit": "₹5,000 in three installments for first child",
+    "documents": [
+      "Aadhaar card",
+      "MCP card",
+      "Bank account",
+      "Pregnancy proof"
+    ],
+    "apply_url": "https://pmmvy.nic.in",
+    "description_hi": "पहले बच्चे की गर्भावस्था में तीन किस्तों में ₹5,000 की आर्थिक मदद मिलती है।",
+    "keywords": [
+      "गर्भावस्था पैसे",
+      "पहला बच्चा मदद",
+      "maternity benefit",
+      "माँ सहायता"
+    ],
+    "demo_story": "First-time mother Rekha gets ₹5,000 in three installments during pregnancy",
+    "tags": [
+      "women",
+      "maternity",
+      "pregnancy",
+      "first child",
+      "cash benefit"
+    ]
+  },
+  {
+    "id": "C024",
+    "name_en": "PM MUDRA Yojana Tarun (Large)",
+    "name_hi": "पीएम मुद्रा योजना तरुण",
+    "category": "employment",
+    "state": "Central",
+    "eligibility": {
+      "notes": "Existing micro enterprises wanting to expand. No collateral."
+    },
+    "benefit": "Loan up to ₹10 lakh at low interest, no collateral required",
+    "documents": [
+      "Aadhaar",
+      "Bank statement",
+      "Existing business proof"
+    ],
+    "apply_url": "https://www.mudra.org.in",
+    "description_hi": "मौजूदा छोटा व्यापार बड़ा करने के लिए बिना गारंटी ₹10 लाख तक का लोन मिलता है।",
+    "keywords": [
+      "बड़ा बिज़नेस लोन",
+      "expand shop loan",
+      "10 lakh business"
+    ],
+    "demo_story": "Tailor with 3 machines expands to 10 machines — MUDRA Tarun gives ₹10 lakh no-collateral loan",
+    "tags": [
+      "business",
+      "loan",
+      "expansion",
+      "no collateral",
+      "10 lakh"
+    ]
+  },
+  {
+    "id": "C025",
+    "name_en": "PM Jan Dhan Yojana",
+    "name_hi": "प्रधानमंत्री जन धन योजना",
+    "category": "financial inclusion",
+    "state": "Central",
+    "eligibility": {
+      "notes": "Any Indian citizen without a bank account. Zero minimum balance."
+    },
+    "benefit": "Free zero-balance bank account + ₹10,000 overdraft + ₹2 lakh accident insurance",
+    "documents": [
+      "Aadhaar card",
+      "One photo"
+    ],
+    "apply_url": "https://pmjdy.gov.in",
+    "description_hi": "बिना न्यूनतम राशि के बैंक खाता + ₹2 लाख दुर्घटना बीमा मिलता है।",
+    "keywords": [
+      "bank account free",
+      "बैंक खाता नहीं है",
+      "zero balance account",
+      "पहली बार बैंक खाता"
+    ],
+    "demo_story": "Village woman with no bank account — Jan Dhan opens free account with ₹2 lakh accident cover",
+    "tags": [
+      "bank account",
+      "financial inclusion",
+      "free",
+      "insurance",
+      "everyone"
+    ]
+  },
+  {
+    "id": "C026",
+    "name_en": "E-Shram Card",
+    "name_hi": "ई-श्रम कार्ड",
+    "category": "social security",
+    "state": "Central",
+    "eligibility": {
+      "notes": "Unorganised sector workers earning below ₹15,000/month"
+    },
+    "benefit": "Free registration + ₹2 lakh accident insurance + priority in govt schemes",
+    "documents": [
+      "Aadhaar card",
+      "Bank account",
+      "Mobile number"
+    ],
+    "apply_url": "https://eshram.gov.in",
+    "description_hi": "असंगठित मजदूर मुफ्त में E-Shram कार्ड बनाकर ₹2 लाख बीमा और सरकारी योजनाओं में प्राथमिकता पाते हैं।",
+    "keywords": [
+      "E-Shram card",
+      "मजदूर कार्ड",
+      "unorganised worker card",
+      "e-shram registration"
+    ],
+    "demo_story": "Construction worker registers free on e-shram.gov.in — instantly gets ₹2 lakh accident cover",
+    "tags": [
+      "unorganised sector",
+      "e-shram",
+      "insurance",
+      "registration",
+      "free",
+      "worker"
+    ]
+  },
+  {
+    "id": "C027",
+    "name_en": "NRLM Self-Help Group Loans",
+    "name_hi": "राष्ट्रीय ग्रामीण आजीविका मिशन SHG ऋण",
+    "category": "women",
+    "state": "Central",
+    "eligibility": {
+      "gender": "female",
+      "residence": "rural",
+      "notes": "Rural women who form Self-Help Groups of 10-15 members"
+    },
+    "benefit": "₹1.5–10 lakh low-interest group loan + free training",
+    "documents": [
+      "SHG formation document",
+      "Group bank account",
+      "Member Aadhaar cards"
+    ],
+    "apply_url": "https://aajeevika.gov.in",
+    "description_hi": "गांव की महिलाएं 10-15 का समूह बनाकर ₹10 लाख तक का सस्ता लोन और मुफ्त प्रशिक्षण पा सकती हैं।",
+    "keywords": [
+      "SHG loan women",
+      "महिला समूह कर्ज",
+      "गांव महिला व्यापार",
+      "self help group loan"
+    ],
+    "demo_story": "10 women in Mandi village form SHG — together they get ₹5 lakh loan to start a pickle business",
+    "tags": [
+      "women",
+      "SHG",
+      "rural",
+      "group loan",
+      "livelihood"
+    ]
+  },
+  {
+    "id": "C028",
+    "name_en": "PM Vishwakarma Yojana",
+    "name_hi": "प्रधानमंत्री विश्वकर्मा योजना",
+    "category": "employment",
+    "state": "Central",
+    "eligibility": {
+      "occupation": [
+        "carpenter",
+        "blacksmith",
+        "potter",
+        "tailor",
+        "cobbler",
+        "goldsmith",
+        "barber",
+        "washerman",
+        "weaver",
+        "mason"
+      ],
+      "notes": "18 traditional artisan trades"
+    },
+    "benefit": "₹15,000 free tool kit + skill training + ₹3 lakh loan at 5% interest",
+    "documents": [
+      "Aadhaar card",
+      "Proof of trade",
+      "Bank account"
+    ],
+    "apply_url": "https://pmvishwakarma.gov.in",
+    "description_hi": "कारीगरों को मुफ्त औजार किट, ट्रेनिंग और 5% ब्याज पर ₹3 लाख तक का कर्ज मिलता है।",
+    "keywords": [
+      "कारीगर मदद",
+      "दर्जी लोन",
+      "नाई मदद",
+      "बढ़ई सहायता",
+      "PM Vishwakarma"
+    ],
+    "demo_story": "Village carpenter gets free tool kit worth ₹15,000 + low-interest ₹3 lakh loan",
+    "tags": [
+      "artisan",
+      "carpenter",
+      "tailor",
+      "cobbler",
+      "loan",
+      "tool kit",
+      "skill"
+    ]
+  },
+  {
+    "id": "C029",
+    "name_en": "Free Ration PMGKAY",
+    "name_hi": "मुफ्त राशन प्रधानमंत्री गरीब कल्याण अन्न योजना",
+    "category": "food",
+    "state": "Central",
+    "eligibility": {
+      "notes": "Anyone with a valid ration card. 80 crore beneficiaries."
+    },
+    "benefit": "5 kg free wheat/rice per person per month (through 2029)",
+    "documents": [
+      "Ration card",
+      "Aadhaar"
+    ],
+    "apply_url": "https://dfpd.gov.in",
+    "description_hi": "राशन कार्ड वाले गरीब परिवारों को हर व्यक्ति 5 किलो मुफ्त अनाज हर महीने मिलता है।",
+    "keywords": [
+      "मुफ्त राशन",
+      "free ration",
+      "गरीब अनाज",
+      "ration card food"
+    ],
+    "demo_story": "BPL family of 5 gets 25 kg free grain every month — no cost at all",
+    "tags": [
+      "ration",
+      "food",
+      "free",
+      "BPL",
+      "wheat",
+      "rice"
+    ]
+  },
+  {
+    "id": "C030",
+    "name_en": "NMMS Scholarship",
+    "name_hi": "राष्ट्रीय साधन सह योग्यता छात्रवृत्ति",
+    "category": "education",
+    "state": "Central",
+    "eligibility": {
+      "income_max": 150000,
+      "education": "Class 8 government school students",
+      "notes": "Family income below ₹1.5 lakh"
+    },
+    "benefit": "₹12,000 per year for 4 years (class 9-12)",
+    "documents": [
+      "Aadhaar",
+      "Marksheet",
+      "Income certificate",
+      "School certificate"
+    ],
+    "apply_url": "https://scholarships.gov.in",
+    "description_hi": "सरकारी स्कूल के गरीब बच्चों को 9वीं से 12वीं तक ₹12,000 सालाना छात्रवृत्ति मिलती है।",
+    "keywords": [
+      "class 8 scholarship",
+      "9th class scholarship",
+      "government school poor scholarship",
+      "NMMS exam"
+    ],
+    "demo_story": "Ramu, class 8, government school — NMMS gives ₹1,000/month for 4 years to keep studying",
+    "tags": [
+      "education",
+      "scholarship",
+      "class 8",
+      "government school"
+    ]
+  },
+  {
+    "id": "HP001",
+    "name_en": "HP Himcare Yojana",
+    "name_hi": "हिमाचल प्रदेश हिमकेयर योजना",
+    "category": "health",
+    "state": "Himachal Pradesh",
+    "eligibility": {
+      "state_resident": "Himachal Pradesh",
+      "notes": "HP residents NOT covered under Ayushman Bharat — unorganised sector, daily wage workers"
+    },
+    "benefit": "₹5 lakh per year health coverage in HP empanelled hospitals",
+    "documents": [
+      "Himachali domicile",
+      "Aadhaar card",
+      "HP ration card"
+    ],
+    "apply_url": "https://himcare.hp.gov.in",
+    "description_hi": "हिमाचल प्रदेश के वे निवासी जिन्हें आयुष्मान नहीं मिला, उन्हें ₹5 लाख का स्वास्थ्य बीमा मिलता है।",
+    "keywords": [
+      "HP बीमारी मदद",
+      "हिमाचल अस्पताल फ्री",
+      "हिमकेयर कार्ड",
+      "HP hospital paise nahi"
+    ],
+    "demo_story": "Daily wage worker in Shimla not covered by Ayushman — Himcare covers ₹5 lakh treatment",
+    "tags": [
+      "HP",
+      "health",
+      "insurance",
+      "hospital",
+      "unorganised sector"
+    ]
+  },
+  {
+    "id": "HP002",
+    "name_en": "HP Beti Hai Anmol Yojana",
+    "name_hi": "बेटी है अनमोल योजना",
+    "category": "education",
+    "state": "Himachal Pradesh",
+    "eligibility": {
+      "gender": "female",
+      "income_max": 200000,
+      "state_resident": "Himachal Pradesh",
+      "notes": "Girl child born after 2006. BPL families."
+    },
+    "benefit": "₹12,000 one-time deposit at birth + ₹300–₹1,200 scholarship/year from class 1 to 12",
+    "documents": [
+      "Birth certificate",
+      "HP domicile",
+      "Income certificate",
+      "Aadhaar",
+      "BPL card"
+    ],
+    "apply_url": "https://edistrict.hp.gov.in",
+    "description_hi": "हिमाचल में BPL परिवार की बेटी के जन्म पर ₹12,000 और हर साल पढ़ाई के लिए छात्रवृत्ति मिलती है।",
+    "keywords": [
+      "बेटी पढ़ाई HP",
+      "हिमाचल बेटी योजना",
+      "लड़की जन्म पैसे",
+      "HP scholarship girl"
+    ],
+    "demo_story": "Lakshmi, BPL family in Kangra, has a newborn daughter — Beti Hai Anmol gives ₹12,000 + annual scholarship",
+    "tags": [
+      "HP",
+      "girl child",
+      "education",
+      "scholarship",
+      "BPL",
+      "birth"
+    ]
+  },
+  {
+    "id": "HP003",
+    "name_en": "Mukhyamantri Swavalamban Yojana HP",
+    "name_hi": "मुख्यमंत्री स्वावलंबन योजना",
+    "category": "employment",
+    "state": "Himachal Pradesh",
+    "eligibility": {
+      "age_min": 18,
+      "age_max": 45,
+      "state_resident": "Himachal Pradesh",
+      "notes": "HP youth starting micro/small enterprise"
+    },
+    "benefit": "25–35% subsidy on project cost up to ₹60 lakh for new HP business",
+    "documents": [
+      "HP domicile",
+      "Aadhaar",
+      "Business plan",
+      "Bank loan sanction letter"
+    ],
+    "apply_url": "https://himachal.nic.in/industriesdept",
+    "description_hi": "हिमाचल के युवाओं को नया व्यापार शुरू करने पर ₹60 लाख तक की लागत पर 35% सब्सिडी मिलती है।",
+    "keywords": [
+      "HP बिज़नेस शुरू",
+      "हिमाचल रोजगार",
+      "स्वरोजगार HP",
+      "HP youth business"
+    ],
+    "demo_story": "Rahul, 25, from Mandi wants to open a bakery — Swavalamban gives 35% subsidy on ₹10 lakh project",
+    "tags": [
+      "HP",
+      "business",
+      "subsidy",
+      "youth",
+      "employment",
+      "self-employment"
+    ]
+  },
+  {
+    "id": "HP004",
+    "name_en": "HP Sahara Yojana",
+    "name_hi": "हिमाचल प्रदेश सहारा योजना",
+    "category": "health",
+    "state": "Himachal Pradesh",
+    "eligibility": {
+      "state_resident": "Himachal Pradesh",
+      "income_max": 400000,
+      "notes": "Serious chronic illness: cancer, kidney failure, Parkinson's, hemophilia, thalassemia, liver failure"
+    },
+    "benefit": "₹3,000 per month for patients with serious diseases",
+    "documents": [
+      "HP domicile",
+      "Medical certificate",
+      "Income certificate",
+      "Aadhaar",
+      "Bank account"
+    ],
+    "apply_url": "https://sahara.hp.gov.in",
+    "description_hi": "गंभीर बीमारी से पीड़ित हिमाचल के मरीज को हर महीने ₹3,000 की आर्थिक मदद मिलती है।",
+    "keywords": [
+      "कैंसर मदद HP",
+      "गुर्दा बीमारी पैसे",
+      "गंभीर बीमारी HP",
+      "सहारा कार्ड"
+    ],
+    "demo_story": "Shyam's wife has cancer in Bilaspur — Sahara Yojana gives ₹3,000/month for her care",
+    "tags": [
+      "HP",
+      "serious illness",
+      "cancer",
+      "kidney",
+      "monthly support",
+      "chronic disease"
+    ]
+  },
+  {
+    "id": "HP005",
+    "name_en": "Medha Protsahan Yojana HP",
+    "name_hi": "मेधा प्रोत्साहन योजना",
+    "category": "education",
+    "state": "Himachal Pradesh",
+    "eligibility": {
+      "state_resident": "Himachal Pradesh",
+      "income_max": 250000,
+      "notes": "HP students preparing for IIT-JEE, NEET, CLAT, UPSC, SSC"
+    },
+    "benefit": "Up to ₹1 lakh/year for coaching at premier institutes",
+    "documents": [
+      "HP domicile",
+      "Marksheet",
+      "Income certificate",
+      "Aadhaar",
+      "Coaching admission letter"
+    ],
+    "apply_url": "https://education.hp.gov.in",
+    "description_hi": "IIT-JEE, NEET की तैयारी के लिए गरीब HP छात्रों को ₹1 लाख तक कोचिंग का खर्च मिलता है।",
+    "keywords": [
+      "IIT JEE coaching HP",
+      "NEET coaching paise",
+      "UPSC coaching HP",
+      "competitive exam HP"
+    ],
+    "demo_story": "Anjali from Solan wants to crack NEET — Medha Protsahan pays ₹1 lakh for coaching",
+    "tags": [
+      "HP",
+      "education",
+      "competitive exam",
+      "coaching",
+      "IIT",
+      "NEET",
+      "UPSC"
+    ]
+  },
+  {
+    "id": "HP006",
+    "name_en": "HP Grihini Suvidha Yojana",
+    "name_hi": "मुख्यमंत्री गृहिणी सुविधा योजना",
+    "category": "women",
+    "state": "Himachal Pradesh",
+    "eligibility": {
+      "gender": "female",
+      "state_resident": "Himachal Pradesh",
+      "notes": "HP women without LPG connection not covered under Ujjwala"
+    },
+    "benefit": "Free LPG gas connection + one free cylinder",
+    "documents": [
+      "HP domicile",
+      "Aadhaar card",
+      "No-LPG certificate"
+    ],
+    "apply_url": "https://himachal.nic.in",
+    "description_hi": "जिन हिमाचल की महिलाओं को उज्ज्वला नहीं मिला, उन्हें मुफ्त गैस कनेक्शन और सिलेंडर मिलता है।",
+    "keywords": [
+      "HP gas free",
+      "हिमाचल गैस कनेक्शन",
+      "गृहिणी गैस",
+      "HP mahila gas"
+    ],
+    "demo_story": "Leela in Kullu cooks on firewood — HP Grihini Suvidha gives her a free LPG connection",
+    "tags": [
+      "HP",
+      "women",
+      "LPG",
+      "cooking",
+      "free",
+      "rural"
+    ]
+  },
+  {
+    "id": "HP007",
+    "name_en": "HP Old Age Pension",
+    "name_hi": "हिमाचल प्रदेश वृद्धावस्था पेंशन",
+    "category": "social security",
+    "state": "Himachal Pradesh",
+    "eligibility": {
+      "age_min": 60,
+      "state_resident": "Himachal Pradesh"
+    },
+    "benefit": "₹850–₹1,500 per month (central + HP top-up)",
+    "documents": [
+      "HP domicile",
+      "Age proof",
+      "Aadhaar",
+      "Bank account",
+      "Income certificate"
+    ],
+    "apply_url": "https://edistrict.hp.gov.in",
+    "description_hi": "हिमाचल के 60 साल से ऊपर के बुजुर्गों को हर महीने ₹850 से ₹1,500 तक पेंशन मिलती है।",
+    "keywords": [
+      "बुजुर्ग पेंशन HP",
+      "हिमाचल बूढ़ा पेंशन",
+      "60 साल HP पैसे",
+      "वृद्ध HP"
+    ],
+    "demo_story": "Dada, 70, in Hamirpur gets ₹1,500/month pension to meet daily needs",
+    "tags": [
+      "HP",
+      "elderly",
+      "pension",
+      "senior citizen",
+      "60+",
+      "monthly income"
+    ]
+  },
+  {
+    "id": "HP008",
+    "name_en": "HP Widow Pension",
+    "name_hi": "हिमाचल प्रदेश विधवा पेंशन",
+    "category": "social security",
+    "state": "Himachal Pradesh",
+    "eligibility": {
+      "gender": "female",
+      "marital_status": "widow",
+      "state_resident": "Himachal Pradesh"
+    },
+    "benefit": "₹850 per month",
+    "documents": [
+      "HP domicile",
+      "Husband's death certificate",
+      "Aadhaar",
+      "Bank account"
+    ],
+    "apply_url": "https://edistrict.hp.gov.in",
+    "description_hi": "हिमाचल की विधवाओं को हर महीने ₹850 पेंशन मिलती है।",
+    "keywords": [
+      "विधवा पेंशन",
+      "पति मर गया HP",
+      "widow HP",
+      "महिला अकेली पेंशन"
+    ],
+    "demo_story": "Geeta lost her husband — HP Widow Pension gives her ₹850/month for survival",
+    "tags": [
+      "HP",
+      "widow",
+      "women",
+      "pension",
+      "monthly income",
+      "social security"
+    ]
+  },
+  {
+    "id": "HP009",
+    "name_en": "HP Divyang Pension",
+    "name_hi": "हिमाचल प्रदेश दिव्यांग पेंशन",
+    "category": "social security",
+    "state": "Himachal Pradesh",
+    "eligibility": {
+      "disability": "40% or more",
+      "state_resident": "Himachal Pradesh"
+    },
+    "benefit": "₹850–₹1,500/month + free assistive devices",
+    "documents": [
+      "HP domicile",
+      "Disability certificate 40%+",
+      "Aadhaar",
+      "Bank account"
+    ],
+    "apply_url": "https://edistrict.hp.gov.in",
+    "description_hi": "40% से ज्यादा विकलांगता वाले हिमाचल के लोगों को हर महीने पेंशन और मुफ्त उपकरण मिलते हैं।",
+    "keywords": [
+      "विकलांग पेंशन HP",
+      "दिव्यांग HP",
+      "disability HP",
+      "अपंग सहायता"
+    ],
+    "demo_story": "Raju with 60% disability in Una gets ₹1,500/month + free wheelchair",
+    "tags": [
+      "HP",
+      "disability",
+      "divyang",
+      "pension",
+      "assistive device"
+    ]
+  },
+  {
+    "id": "HP010",
+    "name_en": "Mukhyamantri Awas Yojana HP",
+    "name_hi": "मुख्यमंत्री आवास योजना हिमाचल प्रदेश",
+    "category": "housing",
+    "state": "Himachal Pradesh",
+    "eligibility": {
+      "state_resident": "Himachal Pradesh",
+      "income_max": 180000,
+      "notes": "HP families not in PMAY-G with no pucca house"
+    },
+    "benefit": "₹1.5 lakh assistance to construct/repair a house",
+    "documents": [
+      "HP domicile",
+      "Aadhaar",
+      "Income certificate",
+      "Land documents",
+      "Bank account"
+    ],
+    "apply_url": "https://himachal.nic.in",
+    "description_hi": "PMAY से वंचित हिमाचल के परिवारों को घर बनाने के लिए ₹1.5 लाख की मदद मिलती है।",
+    "keywords": [
+      "HP घर बनाना",
+      "हिमाचल आवास",
+      "कच्चा घर HP",
+      "मकान मदद HP"
+    ],
+    "demo_story": "Birsa family in Chamba not in PMAY list — CM Awas Yojana gives ₹1.5 lakh for their home",
+    "tags": [
+      "HP",
+      "housing",
+      "home construction",
+      "BPL",
+      "rural"
+    ]
+  },
+  {
+    "id": "HP011",
+    "name_en": "HP Bagwani Vikas Yojana",
+    "name_hi": "हिमाचल प्रदेश बागवानी विकास योजना",
+    "category": "agriculture",
+    "state": "Himachal Pradesh",
+    "eligibility": {
+      "occupation": [
+        "horticulture farmer",
+        "apple grower",
+        "fruit farmer"
+      ],
+      "state_resident": "Himachal Pradesh"
+    },
+    "benefit": "50–85% subsidy on anti-hail nets, irrigation, cold storage, plant material",
+    "documents": [
+      "HP domicile",
+      "Land records",
+      "Horticulture department registration"
+    ],
+    "apply_url": "https://hpagrisnet.gov.in",
+    "description_hi": "हिमाचल के बागवानों को सेब और फलों की खेती पर 85% तक सब्सिडी मिलती है।",
+    "keywords": [
+      "सेब की खेती HP",
+      "बाग मदद",
+      "anti-hail net HP",
+      "fruit farmer HP subsidy"
+    ],
+    "demo_story": "Suresh's apple orchard damaged by hail — Bagwani Yojana gives 85% subsidy on anti-hail net",
+    "tags": [
+      "HP",
+      "apple",
+      "horticulture",
+      "fruit",
+      "subsidy",
+      "farmer",
+      "anti-hail"
+    ]
+  },
+  {
+    "id": "HP012",
+    "name_en": "CM Sukh Aashray Yojana HP",
+    "name_hi": "मुख्यमंत्री सुख आश्रय योजना",
+    "category": "social security",
+    "state": "Himachal Pradesh",
+    "eligibility": {
+      "notes": "Orphans, destitute children, widows in extreme poverty, elderly without support in HP"
+    },
+    "benefit": "₹4,000/month + free housing + educational scholarships for orphans",
+    "documents": [
+      "HP domicile",
+      "Orphan/destitute certificate",
+      "Aadhaar"
+    ],
+    "apply_url": "https://himachal.nic.in",
+    "description_hi": "अनाथ बच्चों, बेसहारा विधवाओं को ₹4,000 प्रति माह और मुफ्त रहने की व्यवस्था मिलती है।",
+    "keywords": [
+      "अनाथ बच्चा HP",
+      "बेसहारा HP",
+      "orphan HP",
+      "निराश्रित HP"
+    ],
+    "demo_story": "12-year-old orphan Ravi in Solan gets ₹4,000/month + free education under CM Sukh Aashray",
+    "tags": [
+      "HP",
+      "orphan",
+      "destitute",
+      "widow",
+      "monthly support",
+      "children"
+    ]
+  },
+  {
+    "id": "HP013",
+    "name_en": "HP Mukhyamantri Vidhyarthi Protsahan Yojana",
+    "name_hi": "मुख्यमंत्री विद्यार्थी प्रोत्साहन योजना",
+    "category": "education",
+    "state": "Himachal Pradesh",
+    "eligibility": {
+      "state_resident": "Himachal Pradesh",
+      "education": "Class 1 to 12 government schools"
+    },
+    "benefit": "₹5,000 to ₹25,000 merit scholarship for top-performing students",
+    "documents": [
+      "HP domicile",
+      "Marksheet",
+      "School certificate",
+      "Aadhaar",
+      "Bank account"
+    ],
+    "apply_url": "https://education.hp.gov.in",
+    "description_hi": "हिमाचल के सरकारी स्कूलों में अच्छे अंक लाने पर ₹25,000 तक की छात्रवृत्ति मिलती है।",
+    "keywords": [
+      "HP merit scholarship",
+      "हिमाचल अच्छे नंबर इनाम",
+      "topper HP",
+      "brilliant student HP"
+    ],
+    "demo_story": "Kajal scored 92% in class 10 government school — gets ₹10,000 merit scholarship",
+    "tags": [
+      "HP",
+      "merit",
+      "scholarship",
+      "government school",
+      "topper"
+    ]
+  },
+  {
+    "id": "HP014",
+    "name_en": "HP Bagwani Bima Yojana (Apple Insurance)",
+    "name_hi": "हिमाचल प्रदेश बागवानी बीमा योजना",
+    "category": "agriculture",
+    "state": "Himachal Pradesh",
+    "eligibility": {
+      "occupation": [
+        "horticulture farmer",
+        "apple grower"
+      ],
+      "state_resident": "Himachal Pradesh"
+    },
+    "benefit": "Crop insurance for apple/fruit crops at highly subsidised premium — up to 80% premium subsidised",
+    "documents": [
+      "HP domicile",
+      "Land records",
+      "Khasra number",
+      "Bank account"
+    ],
+    "apply_url": "https://hpagrisnet.gov.in",
+    "description_hi": "हिमाचल के सेब और फल किसानों की फसल का बीमा बहुत कम प्रीमियम पर होता है।",
+    "keywords": [
+      "सेब बीमा HP",
+      "apple crop insurance",
+      "बागवानी बीमा HP",
+      "fruit loss HP"
+    ],
+    "demo_story": "Apple farmer in Kinnaur pays tiny premium — hail destroys crop but insurance covers the loss",
+    "tags": [
+      "HP",
+      "apple",
+      "fruit",
+      "crop insurance",
+      "horticulture",
+      "low premium"
+    ]
+  },
+  {
+    "id": "HP015",
+    "name_en": "HP Chief Minister Laptop Yojana",
+    "name_hi": "मुख्यमंत्री लैपटॉप योजना हिमाचल",
+    "category": "education",
+    "state": "Himachal Pradesh",
+    "eligibility": {
+      "state_resident": "Himachal Pradesh",
+      "education": "Class 12 passed from HP Board with 70%+"
+    },
+    "benefit": "Free laptop to top-performing Class 12 students",
+    "documents": [
+      "HP domicile",
+      "Class 12 marksheet 70%+",
+      "Aadhaar"
+    ],
+    "apply_url": "https://education.hp.gov.in",
+    "description_hi": "12वीं में 70% से ज्यादा अंक लाने वाले हिमाचल के छात्रों को मुफ्त लैपटॉप मिलता है।",
+    "keywords": [
+      "HP laptop free",
+      "हिमाचल 12th topper laptop",
+      "free laptop student HP",
+      "CM laptop scheme"
+    ],
+    "demo_story": "Pooja scored 78% in HP board — she gets a free laptop to continue her education",
+    "tags": [
+      "HP",
+      "laptop",
+      "free",
+      "class 12",
+      "meritorious",
+      "education"
+    ]
+  },
+  {
+    "id": "HP016",
+    "name_en": "HP Mushroom Development Scheme",
+    "name_hi": "हिमाचल प्रदेश मशरूम विकास योजना",
+    "category": "agriculture",
+    "state": "Himachal Pradesh",
+    "eligibility": {
+      "state_resident": "Himachal Pradesh",
+      "notes": "HP farmers or unemployed youth wanting to grow mushrooms"
+    },
+    "benefit": "Up to 50% subsidy on mushroom spawn, equipment, compost unit",
+    "documents": [
+      "HP domicile",
+      "Land/space proof",
+      "Aadhaar"
+    ],
+    "apply_url": "https://hpagrisnet.gov.in",
+    "description_hi": "मशरूम उगाने के लिए हिमाचल में 50% तक सब्सिडी मिलती है।",
+    "keywords": [
+      "मशरूम खेती HP",
+      "mushroom farming HP",
+      "मशरूम सब्सिडी",
+      "indoor farming HP"
+    ],
+    "demo_story": "Unemployed Monika starts mushroom farming at home — HP gives 50% subsidy on setup",
+    "tags": [
+      "HP",
+      "mushroom",
+      "farming",
+      "subsidy",
+      "income",
+      "unemployed youth"
+    ]
+  },
+  {
+    "id": "HP017",
+    "name_en": "HP Homestay Scheme",
+    "name_hi": "हिमाचल प्रदेश होमस्टे योजना",
+    "category": "employment",
+    "state": "Himachal Pradesh",
+    "eligibility": {
+      "state_resident": "Himachal Pradesh",
+      "notes": "HP rural families with a spare room willing to host tourists"
+    },
+    "benefit": "Up to ₹2 lakh grant + official HP Tourism registration + priority listing",
+    "documents": [
+      "HP domicile",
+      "Property documents",
+      "Bank account",
+      "Aadhaar"
+    ],
+    "apply_url": "https://himachaltourism.gov.in",
+    "description_hi": "हिमाचल में घर में पर्यटकों को ठहराने पर ₹2 लाख तक की मदद और सरकारी पंजीकरण मिलता है।",
+    "keywords": [
+      "homestay HP tourism",
+      "घर में कमरा किराया HP",
+      "rural tourism HP",
+      "tourism HP income"
+    ],
+    "demo_story": "Family in Spiti opens their home to tourists — HP registers them and gives ₹2 lakh setup grant",
+    "tags": [
+      "HP",
+      "tourism",
+      "homestay",
+      "rural income",
+      "extra income",
+      "employment"
+    ]
+  },
+  {
+    "id": "HP018",
+    "name_en": "HP Rajiv Gandhi Mahila Kisan Yojana",
+    "name_hi": "राजीव गांधी महिला किसान योजना",
+    "category": "agriculture",
+    "state": "Himachal Pradesh",
+    "eligibility": {
+      "gender": "female",
+      "occupation": [
+        "farmer"
+      ],
+      "state_resident": "Himachal Pradesh"
+    },
+    "benefit": "Free training, seeds, fertilizer kits + 50% subsidy on farming tools",
+    "documents": [
+      "HP domicile",
+      "Land records or lease",
+      "Aadhaar"
+    ],
+    "apply_url": "https://hpagrisnet.gov.in",
+    "description_hi": "हिमाचल की महिला किसानों को मुफ्त बीज, खाद और कृषि उपकरणों पर 50% सब्सिडी मिलती है।",
+    "keywords": [
+      "महिला किसान HP",
+      "HP woman farmer subsidy",
+      "औरत खेती HP",
+      "seeds free HP"
+    ],
+    "demo_story": "Shanti, a woman farmer in Kangra, gets free seeds + 50% off on farming tools",
+    "tags": [
+      "HP",
+      "women",
+      "farmer",
+      "subsidy",
+      "seeds",
+      "tools",
+      "agriculture"
+    ]
+  },
+  {
+    "id": "HP019",
+    "name_en": "HP SC ST Housing Grant",
+    "name_hi": "डॉ. अंबेडकर आवास योजना हिमाचल",
+    "category": "housing",
+    "state": "Himachal Pradesh",
+    "eligibility": {
+      "caste": [
+        "SC",
+        "ST"
+      ],
+      "state_resident": "Himachal Pradesh",
+      "income_max": 200000
+    },
+    "benefit": "₹1.5 lakh grant for house construction",
+    "documents": [
+      "HP domicile",
+      "Caste certificate",
+      "Aadhaar",
+      "Income certificate",
+      "Land documents"
+    ],
+    "apply_url": "https://edistrict.hp.gov.in",
+    "description_hi": "हिमाचल के SC/ST परिवारों को पक्का घर बनाने के लिए ₹1.5 लाख अनुदान मिलता है।",
+    "keywords": [
+      "SC ST घर HP",
+      "Dalit housing HP",
+      "आदिवासी मकान HP",
+      "अनुसूचित जाति आवास"
+    ],
+    "demo_story": "Mala, a Dalit woman in Sirmaur, gets ₹1.5 lakh grant to build her family's first pucca house",
+    "tags": [
+      "HP",
+      "SC",
+      "ST",
+      "Dalit",
+      "housing",
+      "grant"
+    ]
+  },
+  {
+    "id": "HP020",
+    "name_en": "HP Sheep Goat Rearing Subsidy",
+    "name_hi": "हिमाचल प्रदेश भेड़-बकरी पालन योजना",
+    "category": "agriculture",
+    "state": "Himachal Pradesh",
+    "eligibility": {
+      "state_resident": "Himachal Pradesh",
+      "notes": "HP families especially tribal wanting to start sheep/goat rearing"
+    },
+    "benefit": "50% subsidy on purchase of sheep/goats (min 10 animals) + free veterinary support",
+    "documents": [
+      "HP domicile",
+      "Land/grazing rights document",
+      "Aadhaar",
+      "Bank account"
+    ],
+    "apply_url": "https://himachal.nic.in/ahvf",
+    "description_hi": "हिमाचल में भेड़-बकरी पालने के लिए 50% सब्सिडी और मुफ्त पशु चिकित्सा सेवा मिलती है।",
+    "keywords": [
+      "बकरी पालन HP",
+      "भेड़ पालन HP",
+      "goat rearing HP",
+      "animal husbandry HP"
+    ],
+    "demo_story": "Tribal family in Kinnaur starts goat rearing — HP pays 50% of the cost of 20 goats",
+    "tags": [
+      "HP",
+      "goat",
+      "sheep",
+      "animal husbandry",
+      "tribal",
+      "subsidy"
+    ]
+  }
+]
