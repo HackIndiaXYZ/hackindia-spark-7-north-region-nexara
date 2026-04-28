@@ -21,7 +21,7 @@ enum VoiceFormState {
   bpl,
   hardship,
   income,
-  completed
+  completed,
 }
 
 class VoiceProvider with ChangeNotifier {
@@ -31,6 +31,7 @@ class VoiceProvider with ChangeNotifier {
   String _spokenText = '';
   bool _speechEnabled = false;
   bool _isProcessing = false;
+  bool _isSpeaking = false;
 
   VoiceFormState _formState = VoiceFormState.notStarted;
   Map<String, String> userProfile = {};
@@ -52,7 +53,9 @@ class VoiceProvider with ChangeNotifier {
 
   void _loadSchemes() async {
     try {
-      final String response = await rootBundle.loadString('lib/assets/schemes.json');
+      final String response = await rootBundle.loadString(
+        'lib/assets/schemes.json',
+      );
       final List<dynamic> data = json.decode(response);
       _allSchemes = data.map((e) => Scheme.fromJson(e)).toList();
     } catch (e) {
@@ -62,17 +65,42 @@ class VoiceProvider with ChangeNotifier {
 
   void _initTts() async {
     await _flutterTts.setLanguage("hi-IN");
-    await _flutterTts.awaitSpeakCompletion(true);
-    
-    // Bulletproof trigger: automatically start mic after TTS actually finishes rendering audio
-    _flutterTts.setCompletionHandler(() {
-      if (_formState != VoiceFormState.notStarted && _formState != VoiceFormState.completed) {
-        // Start listening immediately when TTS finishes so we don't miss instant replies
-        if (!_isListening && !_speechToText.isListening) {
-          _startListening();
-        }
-      }
+    // Removed awaitSpeakCompletion(true) completely because it blocks forever on this device!
+
+    _flutterTts.setStartHandler(() {
+      _isSpeaking = true;
+      notifyListeners();
     });
+
+    _flutterTts.setCompletionHandler(() {
+      _isSpeaking = false;
+      notifyListeners();
+    });
+
+    _flutterTts.setErrorHandler((msg) {
+      _isSpeaking = false;
+      notifyListeners();
+    });
+  }
+
+  void _safeStartListening() async {
+    // First, give the TTS engine up to 2 seconds to officially report that it HAS STARTED speaking
+    for (int i = 0; i < 10; i++) {
+      if (_isSpeaking) break;
+      await Future.delayed(const Duration(milliseconds: 200));
+    }
+
+    // Now, bulletproof loop to wait until the TTS actually FINISHES speaking
+    for (int i = 0; i < 40; i++) { // Wait up to 20 seconds max for very long questions
+      if (!_isSpeaking) break;
+      await Future.delayed(const Duration(milliseconds: 500));
+    }
+    
+    // Wait an extra half-second for speaker echo to dissipate completely
+    await Future.delayed(const Duration(milliseconds: 500));
+    if (!_isListening && !_speechToText.isListening) {
+      _startListening();
+    }
   }
 
   Future<void> startOnboarding() async {
@@ -83,13 +111,28 @@ class VoiceProvider with ChangeNotifier {
     userProfile['Debug Log'] = ''; // Initialize log
     notifyListeners();
 
-    await _flutterTts.speak("Main aapki sahayata karna chahti hun. Sabse pehle, aapka ling kya hai? Purush, Mahila, ya anya?");
-    // TTS Completion Handler will start the microphone automatically
+    await _flutterTts.speak(
+      "Main aapki sahayata karna chahti hun. Sabse pehle, aapka ling kya hai? Purush, Mahila, ya anya?",
+    );
+    _safeStartListening();
   }
 
   void _initSpeech() async {
     _speechEnabled = await _speechToText.initialize(
       onError: (error) {
+        // If it's just a timeout or no match, don't spam the user with repeats
+        if (error.errorMsg == 'error_speech_timeout' ||
+            error.errorMsg == 'error_no_match') {
+          _spokenText = 'Listening to your request...'; // Keep it pending
+          _isListening = false;
+          notifyListeners();
+          // Silently restart the mic once to give them more time
+          Future.delayed(const Duration(milliseconds: 500), () {
+            _startListening();
+          });
+          return;
+        }
+
         _spokenText = 'Error recognizing speech: ${error.errorMsg}';
         _isListening = false;
         notifyListeners();
@@ -114,12 +157,14 @@ class VoiceProvider with ChangeNotifier {
   void toggleListening() {
     if (!_speechEnabled) {
       _initSpeech();
-      _spokenText = 'Speech recognition not available or permission denied. Please try again.';
+      _spokenText =
+          'Speech recognition not available or permission denied. Please try again.';
       notifyListeners();
       return;
     }
 
     if (_speechToText.isListening || _isListening) {
+      _flutterTts.stop(); // ONLY stop TTS when user manually toggles
       _stopListening();
     } else {
       _startListening();
@@ -129,7 +174,7 @@ class VoiceProvider with ChangeNotifier {
   void _startListening() async {
     if (_speechToText.isListening) return;
 
-    await _flutterTts.stop();
+    // REMOVED await _flutterTts.stop(); so we never cut off TTS prematurely!
 
     _spokenText = 'Listening to your request...';
     _isListening = true;
@@ -141,14 +186,16 @@ class VoiceProvider with ChangeNotifier {
         onResult: (result) {
           if (result.recognizedWords.isNotEmpty) {
             _spokenText = result.recognizedWords;
-            // Record everything we hear for debugging
-            userProfile['Debug Log'] = '${userProfile['Debug Log'] ?? ''} [Hear: ${result.recognizedWords}]';
+            userProfile['Debug Log'] =
+                '${userProfile['Debug Log'] ?? ''} [Hear: ${result.recognizedWords}]';
           }
           notifyListeners();
         },
         localeId: 'hi_IN',
-        listenFor: const Duration(seconds: 30), // Allow up to 30s total
-        pauseFor: const Duration(seconds: 5),   // Allow 5s of silence buffer before giving up
+        listenFor: const Duration(seconds: 30),
+        pauseFor: const Duration(
+          seconds: 10,
+        ), // Wait up to 10 seconds of silence!
       );
     } catch (e) {
       _isListening = false;
@@ -173,18 +220,21 @@ class VoiceProvider with ChangeNotifier {
   }
 
   void _processVoiceInput() async {
-    if (_isProcessing) return; 
+    if (_isProcessing) return;
     _isProcessing = true;
 
-    if (_formState == VoiceFormState.notStarted || _formState == VoiceFormState.completed) {
-       _isProcessing = false;
-       return;
+    if (_formState == VoiceFormState.notStarted ||
+        _formState == VoiceFormState.completed) {
+      _isProcessing = false;
+      return;
     }
 
-    // If the input is completely empty or just the listening placeholder
-    if (_spokenText == 'Listening to your request...' || _spokenText.trim().isEmpty || _spokenText.startsWith('Error')) {
+    if (_spokenText == 'Listening to your request...' ||
+        _spokenText.trim().isEmpty ||
+        _spokenText.startsWith('Error')) {
       _retryCount++;
-      if (_retryCount >= 2) {
+      if (_retryCount >= 3) {
+        // Increased to 3 tries
         _spokenText = 'Not Provided';
       } else {
         _isProcessing = false;
@@ -203,16 +253,19 @@ class VoiceProvider with ChangeNotifier {
         break;
       case VoiceFormState.age:
         userProfile['Age'] = answer;
-        
-        bool isFemale = userProfile['Gender']?.contains('mahila') == true || 
-                        userProfile['Gender']?.contains('female') == true ||
-                        userProfile['Gender']?.contains('aurat') == true ||
-                        userProfile['Gender']?.contains('girl') == true;
+
+        bool isFemale =
+            userProfile['Gender']?.contains('mahila') == true ||
+            userProfile['Gender']?.contains('female') == true ||
+            userProfile['Gender']?.contains('aurat') == true ||
+            userProfile['Gender']?.contains('girl') == true;
         int age = int.tryParse(answer.replaceAll(RegExp(r'[^0-9]'), '')) ?? 0;
-        
+
         if (isFemale && age >= 18) {
           _formState = VoiceFormState.maritalStatus;
-          _askQuestion("Aapki vaivahik sthiti kya hai? Vivahit, avivahit, vidhwa, ya talakshuda?");
+          _askQuestion(
+            "Aapki vaivahik sthiti kya hai? Vivahit, avivahit, vidhwa, ya talakshuda?",
+          );
         } else {
           _formState = VoiceFormState.state;
           _askQuestion("Aap kis rajya ke nivasi hain?");
@@ -240,9 +293,14 @@ class VoiceProvider with ChangeNotifier {
         break;
       case VoiceFormState.disability:
         userProfile['Person with Disability'] = answer;
-        if (answer.contains('haan') || answer.contains('yes') || answer.contains('ha') || answer.contains('ji')) {
+        if (answer.contains('haan') ||
+            answer.contains('yes') ||
+            answer.contains('ha') ||
+            answer.contains('ji')) {
           _formState = VoiceFormState.disabilityPercentage;
-          _askQuestion("Aapki divyangta ka pratishat kya hai? Zero se sau ke beech mein bataiye.");
+          _askQuestion(
+            "Aapki divyangta ka pratishat kya hai? Zero se sau ke beech mein bataiye.",
+          );
         } else {
           _formState = VoiceFormState.minority;
           _askQuestion("Kya aap alpasankhyak varg se hain? Haan ya Naa?");
@@ -265,9 +323,14 @@ class VoiceProvider with ChangeNotifier {
         break;
       case VoiceFormState.bpl:
         userProfile['BPL Category'] = answer;
-        if (answer.contains('haan') || answer.contains('yes') || answer.contains('ha') || answer.contains('ji')) {
+        if (answer.contains('haan') ||
+            answer.contains('yes') ||
+            answer.contains('ha') ||
+            answer.contains('ji')) {
           _formState = VoiceFormState.hardship;
-          _askQuestion("Kya aap kisi aarthik sankat jaise niraashrit ya behad garibi ka saamna kar rahe hain? Haan ya Naa?");
+          _askQuestion(
+            "Kya aap kisi aarthik sankat jaise niraashrit ya behad garibi ka saamna kar rahe hain? Haan ya Naa?",
+          );
         } else {
           _formState = VoiceFormState.income;
           _askQuestion("Aapke parivar ki vaarshik aay kitni hai?");
@@ -284,7 +347,7 @@ class VoiceProvider with ChangeNotifier {
       default:
         break;
     }
-    
+
     _isProcessing = false;
   }
 
@@ -295,34 +358,92 @@ class VoiceProvider with ChangeNotifier {
     _spokenText = 'Waiting for voice...';
     notifyListeners();
     await _flutterTts.speak(questionText);
-    // TTS Completion Handler will start the microphone automatically
+    _safeStartListening();
   }
 
   void _repeatCurrentQuestion() {
     switch (_formState) {
-      case VoiceFormState.gender: _askQuestion("Kripya bataiye, aapka ling kya hai? Purush, Mahila, ya anya?", isRetry: true); break;
-      case VoiceFormState.age: _askQuestion("Kripya apni umar bataiye.", isRetry: true); break;
-      case VoiceFormState.maritalStatus: _askQuestion("Kripya apni vaivahik sthiti bataiye.", isRetry: true); break;
-      case VoiceFormState.state: _askQuestion("Kripya apne rajya ka naam bataiye.", isRetry: true); break;
-      case VoiceFormState.residence: _askQuestion("Kripya bataiye aap kis shetra mein rehte hain? Shahri ya Gramin?", isRetry: true); break;
-      case VoiceFormState.category: _askQuestion("Kripya apna varg bataiye. General, OBC, SC, ST, ya anya?", isRetry: true); break;
-      case VoiceFormState.disability: _askQuestion("Kripya bataiye, kya aap divyang hain? Haan ya Naa?", isRetry: true); break;
-      case VoiceFormState.disabilityPercentage: _askQuestion("Kripya apni divyangta ka pratishat bataiye.", isRetry: true); break;
-      case VoiceFormState.minority: _askQuestion("Kripya bataiye, kya aap alpasankhyak varg se hain? Haan ya Naa?", isRetry: true); break;
-      case VoiceFormState.student: _askQuestion("Kripya bataiye, kya aap abhi vidyarthi hain? Haan ya Naa?", isRetry: true); break;
-      case VoiceFormState.bpl: _askQuestion("Kripya bataiye, kya aap BPL shreni mein aate hain? Haan ya Naa?", isRetry: true); break;
-      case VoiceFormState.hardship: _askQuestion("Kripya bataiye, kya aap aarthik sankat ka saamna kar rahe hain? Haan ya Naa?", isRetry: true); break;
-      case VoiceFormState.income: _askQuestion("Kripya apne parivar ki vaarshik aay bataiye.", isRetry: true); break;
-      default: break;
+      case VoiceFormState.gender:
+        _askQuestion(
+          "Kripya bataiye, aapka ling kya hai? Purush, Mahila, ya anya?",
+          isRetry: true,
+        );
+        break;
+      case VoiceFormState.age:
+        _askQuestion("Kripya apni umar bataiye.", isRetry: true);
+        break;
+      case VoiceFormState.maritalStatus:
+        _askQuestion("Kripya apni vaivahik sthiti bataiye.", isRetry: true);
+        break;
+      case VoiceFormState.state:
+        _askQuestion("Kripya apne rajya ka naam bataiye.", isRetry: true);
+        break;
+      case VoiceFormState.residence:
+        _askQuestion(
+          "Kripya bataiye aap kis shetra mein rehte hain? Shahri ya Gramin?",
+          isRetry: true,
+        );
+        break;
+      case VoiceFormState.category:
+        _askQuestion(
+          "Kripya apna varg bataiye. General, OBC, SC, ST, ya anya?",
+          isRetry: true,
+        );
+        break;
+      case VoiceFormState.disability:
+        _askQuestion(
+          "Kripya bataiye, kya aap divyang hain? Haan ya Naa?",
+          isRetry: true,
+        );
+        break;
+      case VoiceFormState.disabilityPercentage:
+        _askQuestion(
+          "Kripya apni divyangta ka pratishat bataiye.",
+          isRetry: true,
+        );
+        break;
+      case VoiceFormState.minority:
+        _askQuestion(
+          "Kripya bataiye, kya aap alpasankhyak varg se hain? Haan ya Naa?",
+          isRetry: true,
+        );
+        break;
+      case VoiceFormState.student:
+        _askQuestion(
+          "Kripya bataiye, kya aap abhi vidyarthi hain? Haan ya Naa?",
+          isRetry: true,
+        );
+        break;
+      case VoiceFormState.bpl:
+        _askQuestion(
+          "Kripya bataiye, kya aap BPL shreni mein aate hain? Haan ya Naa?",
+          isRetry: true,
+        );
+        break;
+      case VoiceFormState.hardship:
+        _askQuestion(
+          "Kripya bataiye, kya aap aarthik sankat ka saamna kar rahe hain? Haan ya Naa?",
+          isRetry: true,
+        );
+        break;
+      case VoiceFormState.income:
+        _askQuestion(
+          "Kripya apne parivar ki vaarshik aay bataiye.",
+          isRetry: true,
+        );
+        break;
+      default:
+        break;
     }
   }
 
   void _finishForm() async {
     _formState = VoiceFormState.completed;
-    _spokenText = "Dhanyavad. Humne aapki jankari darj kar li hai. Yahan aapka profile hai.";
+    _spokenText =
+        "Dhanyavad. Humne aapki jankari darj kar li hai. Yahan aapka profile hai.";
     notifyListeners();
     await _flutterTts.speak(_spokenText);
-    
+
     _suggestedSchemes = _pickRandomSchemes(3);
     notifyListeners();
   }
